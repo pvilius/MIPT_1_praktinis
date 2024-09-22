@@ -1,5 +1,6 @@
 package com.example.mipt_1_praktinis;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,10 +12,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView tvMain;
     Button btnChangeText;
+    Button btnChangeColour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,5 +41,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnChangeColour = (Button)findViewById(R.id.btnChangeColour);
+        btnChangeColour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tvMain.setTextColor(Color.parseColor("#BF0A30"));
+            }
+        });
     }
 }
