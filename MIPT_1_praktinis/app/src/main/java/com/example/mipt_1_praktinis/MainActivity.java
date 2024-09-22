@@ -1,8 +1,6 @@
 package com.example.mipt_1_praktinis;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,10 +20,5 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
-
-    public void btnChangeTextClick(View view) {
-        TextView tvMain = (TextView)findViewById(R.id.tvMain);
-        tvMain.setText("Hello");
     }
 }
